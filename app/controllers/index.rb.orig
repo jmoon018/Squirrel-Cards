@@ -1,10 +1,8 @@
 get '/' do
-
-erb :index
+  erb :index
 end
 
 get '/options' do
-
-erb :option
+  erb :option
 end
 
