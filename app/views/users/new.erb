@@ -1,0 +1,13 @@
+<h1>Register</h1>
+<div class="errors">
+  <%= @user.errors.full_messages if @user.errors.any? %>
+
+</div>
+<form action="/users/new" method="post">
+  <input type="text" name="user[name]" placeholder="Username">
+  <input type="email" name="user[email]" placeholder="Email Address"> <br>
+
+  <input type="password" name="user[password]" placeholder="Password">
+  <input type="password" name="user[password_confirmation]" placeholder="Confirm">
+  <input type="submit" value="Register">
+</form>

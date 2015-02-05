@@ -21,4 +21,9 @@ helpers do
     @session_current_user = nil
   end
 
+  def session_set_current_user user
+    session[:current_user_id] = user.id
+    @current_user = user
+  end
+
 end
