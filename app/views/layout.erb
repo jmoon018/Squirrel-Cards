@@ -19,13 +19,12 @@
 </head>
 <div class="header">
   <% if session_logged_in? %>
-      Hi <%= session_current_user.email %>!
+      Hi <%= session_current_user.name %>!
       <a href="/session/logout">Sign Out</a>
   <% else %>
       <a href="/users/new">Register</a>
       <a href="/session/new">Sign In</a>
   <% end %>
-  <a href="/secrets">Secret Stuff</a>
 </div>
 <body>
   <%= yield %>
