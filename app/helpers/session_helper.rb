@@ -32,7 +32,7 @@ helpers do
 
       if candidate.password_hash.blank?
         # Use Unsafe Old Password
-        session_set_current_user candidate if candidate.read_attribute(:password) == password
+        session_set_current_user(candidate) if candidate.read_attribute(:password) == password
       else
         # Use BCrypt Override
         session_set_current_user candidate if candidate.password == password

@@ -7,7 +7,7 @@ post '/session/new' do
   @info = params[:user]
   if session_authenticate(@info[:name], @info[:password])
   else
-    erb :'session/new'
+    redirect('/session/new')
   end
   redirect("/")
 end
