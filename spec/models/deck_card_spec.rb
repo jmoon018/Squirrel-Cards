@@ -1,7 +1,11 @@
-__END__
-require_relative 'spec_helper.rb'
+require_relative '../spec_helper.rb'
 
 describe "deck + cards models" do
+
+before(:each) do
+  Card.destroy_all
+  Deck.destroy_all
+end
 
   # CARD PROPERTIES
   # =============================
@@ -78,7 +82,7 @@ describe "deck + cards models" do
 
     it "will recognize wrong deck descriptions" do
       description = "The best deck ever!!!"
-      deck = Deck.create(user_id: 1,
+      deck = Deck.new(user_id: 1,
         name: "Jamal's Deck",
         description: description)
       expect(deck.description).not_to eq(description+"!!!!")
@@ -86,14 +90,14 @@ describe "deck + cards models" do
   end
 
   describe "the relationship between card + deck" do
-    deck = Deck.create(name: "Jamal's Deck",
+    deck = Deck.new(name: "Jamal's Deck",
       description: "A terse description of Jamal's Deck")
     it "deck is empty upon init." do
       expect(deck.cards).to be_empty
     end
 
     it "deck can contain multiple (2) cards" do
-      card1 = Card.reate(answer: "Ans1", question: "Que1", deck_id: 1)
+      card1 = Card.create(answer: "Ans1", question: "Que1", deck_id: 1)
       card2 = Card.create(answer: "Ans2", question: "Que2", deck_id: 1)
       (Card.all.count).should eq(2)
     end
