@@ -21,4 +21,25 @@ helpers do
     @session_current_user = nil
   end
 
+  def session_set_current_user user
+    session[:current_user_id] = user.id
+    @current_user = user
+  end
+
+  def session_authenticate name, password
+    candidate = User.find_by(:name => name)
+    if !candidate.blank?
+
+      if candidate.password_hash.blank?
+        # Use Unsafe Old Password
+        session_set_current_user candidate if candidate.read_attribute(:password) == password
+      else
+        # Use BCrypt Override
+        session_set_current_user candidate if candidate.password == password
+      end
+    else
+      false
+    end
+  end
+
 end
