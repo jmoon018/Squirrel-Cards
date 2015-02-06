@@ -6,10 +6,11 @@ end
 post '/session/new' do
   @info = params[:user]
   if session_authenticate(@info[:name], @info[:password])
+    redirect("/")
   else
     redirect('/session/new')
   end
-  redirect("/")
+
 end
 
 get '/session/logout' do
