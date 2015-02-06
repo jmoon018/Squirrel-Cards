@@ -1,0 +1,14 @@
+
+
+<h2 class="deckListPageTitle">List of Your Decks</h2>
+
+<div class="centerContainer">
+  <% Deck.all.each do |deck| %>
+    <div class="deckList">
+      <h3 class="deckListName"><%= deck.name %></h3>
+      <p class="deckListDesc"><%= deck.description %></p>
+      <p class="deckListNumOfCards"><%= deck.cards.count %> cards</p>
+      <div class="deckListSeparator"></div>
+    </div>
+  <% end %>
+</div>

@@ -4,12 +4,6 @@ class User < ActiveRecord::Base
 
   # users.password_hash in the database is a :string
   include BCrypt
-require 'bcrypt'
-
-class User < ActiveRecord::Base
-
-  # users.password_hash in the database is a :string
-  include BCrypt
 
   validates :email, {
         :uniqueness => {:case_sensitive => false},
@@ -26,7 +20,6 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 
-end
 
   validates :password, :presence => true, length: {minimum: 6}, confirmation: true
 

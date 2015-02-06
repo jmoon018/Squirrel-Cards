@@ -63,3 +63,48 @@ a:hover {
 
 
 
+
+/* List of Decks CSS */
+
+.centerContainer {
+  width: 80%;
+  max-width: 900px;
+  min-width: 600px;
+  margin: auto;
+}
+
+.deckList {
+  box-sizixng: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+}
+
+/* 'list of your decks' */
+.deckListPageTitle {
+  text-align: center;
+  font-size: 2.1em;
+}
+
+.deckListName {
+  text-align: left;
+  text-decoration: underline;
+  font-size: 1.3em;
+}
+
+.deckListDesc {
+  text-align: left;
+  font-size: 1em;
+}
+.deckListNumOfCards {
+  font-color: rgba(0, 0, 0, 0.8); /* gray */
+  font-size: .8em;
+}
+
+.deckListSeparator {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
