@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   has_many :decks
 
+
+
   validates :email, {
         :uniqueness => {:case_sensitive => false},
         :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i}
@@ -21,5 +23,4 @@ class User < ActiveRecord::Base
     @password = Password.create(new_password)
     self.password_hash = @password
   end
-
 end
