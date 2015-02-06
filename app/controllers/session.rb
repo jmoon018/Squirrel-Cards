@@ -14,7 +14,8 @@ end
 
 get '/session/logout' do
   session_logout
-  redirect("/")
+  # redirect("/")
+  erb :'/signout'
 end
 
 put '' do

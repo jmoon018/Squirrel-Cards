@@ -1,4 +1,5 @@
-<h1>Register</h1>
+<div class="spacing">
+<h1 class="start_header">Register</h1>
 <div class="errors">
   <%= @user.errors.full_messages if @user.errors.any? %>
 
@@ -9,5 +10,7 @@
 
   <input type="password" name="user[password]" placeholder="Password">
   <input type="password" name="user[password_confirmation]" placeholder="Confirm">
-  <input type="submit" value="Register">
+  <br><br>
+  <center><input type="submit" value="Register"></center>
 </form>
+</div>

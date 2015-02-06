@@ -7,7 +7,7 @@ post '/users/new' do
   @user = User.new(params[:user])
   if @user.save
     session_set_current_user @user
-    redirect ("/")
+    redirect ("/options")
   else
     erb :'users/new'
   end
