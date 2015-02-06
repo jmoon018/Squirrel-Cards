@@ -1,12 +1,12 @@
 
-  <h1 class="start_header">Sign in</h1>
+  <h1 class="start_header">Sign in</h1><br>
   <div class="errors">
     <%= @user.errors.full_messages if @user.errors.any? %>
   </div>
 
   <form action="/session/new" method="post">
     <input type="text" name="user[name]" placeholder="Username">
-    <input type="password" name="user[password]" placeholder="Password">
-    <input type="submit" value="Sign In">
+    <input type="password" name="user[password]" placeholder="Password"><br><br>
+    <center><input type="submit" value="Sign In"></center>
   </form>
 
