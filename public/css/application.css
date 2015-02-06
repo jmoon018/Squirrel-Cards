@@ -124,3 +124,12 @@ form {
   margin-bottom: 5px;
 }
 
+.score_bar {
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 100%;
+  right: 0px;
+/*  display: inline-block;
+*/}
+

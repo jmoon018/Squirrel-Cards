@@ -21,3 +21,8 @@ get '/decks' do
 
   erb :decks
 end
+
+get '/game' do
+
+erb :game
+end
