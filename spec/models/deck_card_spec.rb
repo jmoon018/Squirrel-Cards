@@ -47,7 +47,16 @@ end
         answer: answer)
       expect(card.answer).not_to eq(answer.capitalize)
     end
+
+    it "will know when the answer is correct" do
+      answer = "red"
+      card = Card.new(deck_id: 1,
+        question: "What is the color of a red shirt?",
+        answer: answer)
+      expect(card.compare("red")).to eq(true)
+    end
   end
+
 
 
   # DECK PROPERTIES
