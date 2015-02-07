@@ -17,14 +17,14 @@
   text-align: center;
 }
 
-.footer {
+/*.footer {
   width: 100%;
   height: 15px;
   bottom: 0px;
   left: 10px;
   position: absolute;
   font-size: 12px;
-}
+}*/
 
 IMG.logo {
 /*  display: block;*/
@@ -44,7 +44,7 @@ h1 {
   font-weight: 900;
 }
 
-button {
+.options button {
   font-family: 'Arvo', serif;
   padding: 50px;
   background-color: #83EAC0;
@@ -140,3 +140,61 @@ form {
   width: 100%;
   margin:auto;
 }
+
+.score_bar {
+  background-color: black;
+  color:white;
+  height: 60px;
+  width: 100%;
+  /*text-align: right;*/
+/*  display: inline-block;
+*/}
+
+.score {
+  float:right;
+  margin-left: 40%;
+  padding-right: 40px;
+  font-size: 15px;
+
+/*  text-align: right;
+*/}
+
+.card {
+  background-color: beige;
+  border: 3px dotted #50968E;
+  height: 250px;
+  width: 750px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.card h1 {
+  padding-top: 70px;
+}
+
+.footer {
+ position: fixed;
+ bottom:0;
+ left:0;
+ width: 100%;
+ height: 20px;
+ background-color: black;
+ text-align: left;
+ color: white;
+ font-size: 15px;
+/* padding-top: 150px;*/
+}
+
+.answer_section {
+  padding-top: 200px;
+  padding-bottom: 150px;}
+/*.score ul {
+  display: block;
+  text-align: right;
+  margin: 0;
+  padding: 16px;
+}*/
+
+
