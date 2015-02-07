@@ -1,0 +1,7 @@
+
+
+<%= @session_deck.muck[-1].question %>
+<form action="/deck/:id/play" method="post">
+  <input type="text" name="guess" placeholder="Guess?">
+  <input type="submit" value="Answer!">
+</form>
