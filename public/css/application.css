@@ -85,12 +85,12 @@ form {
 .centerContainer {
   width: 80%;
   max-width: 900px;
-  min-width: 600px;
+  min-width: 800px;
   margin: auto;
 }
 
 .deckList {
-  box-sizixng: border-box;
+  box-sizing: border-box;
   width: 100%;
   padding: 10px;
   margin: auto;
@@ -121,6 +121,22 @@ form {
   height: 1px;
   width: 100%;
   background-color: black;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
+/* text box for editing questions and answers in a card */
+.qa_input {
+  margin-bottom: 5px;
+  width: 650px;
+}
+
+.qa_text {
+    font-size: 1.1em;
+    display: inline;
+    margin-right: 5px;
+}
+
+.edit_deck_form {
+  width: 100%;
+  margin:auto;
+}

@@ -1,0 +1,37 @@
+
+<h2 class="deckListPageTitle">Edit Your '<%= @deck.name %>' Deck!</h2>
+
+
+
+<div class="centerContainer">
+  <form class="edit_deck_form" action="/decks/<%= @deck.name %>/edit" method="post">
+    <% @deck.cards.order(:id).to_a.each_with_index do |card, index| %>
+      <div class="deckList">
+        <h2>Card <%= (index+1).to_s %> </h2>
+
+        <div>
+          <p class="qa_text">Question:</p>
+          <input class="qa_input" name="<%= card.id.to_s %>_question" type="text" value="<%= card.question%>">
+          <input type="hidden" name="_method" value="put">
+        </div>
+
+        <div>
+          <p class="qa_text">Answer:</p>
+          <input class="qa_input" name="<%= card.id.to_s %>_answer" type="text" value="<%= card.answer %>">
+          <input type="hidden" name="_method" value="put">
+        </div>
+      </div>
+    <% end %>
+
+    <input type="submit" value="Change card(s)">
+
+  </form>
+
+  <form class="edit_deck_form" action="/decks/<%= @deck.name %>/edit" method="post">
+      <input type="submit" value = "Make a new card!">
+  </form>
+
+  <form class="edit_deck_form" action="/decks" method="get">
+    <input type="submit" value = "Go back!">
+  </form>
+</div>

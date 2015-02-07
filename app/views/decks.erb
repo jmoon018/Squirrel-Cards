@@ -5,7 +5,7 @@
 <div class="centerContainer">
   <% @user_decks.each do |deck| %>
     <div class="deckList">
-      <h3 class="deckListName"><%= deck.name %></h3>
+      <h3 class="deckListName"><a href="/decks/<%= deck.name %>/edit"><%= deck.name %></a></h3>
       <p class="deckListDesc"><%= deck.description %></p>
       <p class="deckListNumOfCards"><%= deck.cards.count %> cards</p>
       <div class="deckListSeparator"></div>
