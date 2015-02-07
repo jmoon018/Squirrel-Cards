@@ -52,3 +52,8 @@ get '/decks/:deck_name/new' do
   @deck = user.decks.where(name: params[:deck_name]).first
   erb :new_card
 end
+
+post '/decks/new' do
+
+  erb :new_deck
+end
