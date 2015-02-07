@@ -26,3 +26,12 @@ get '/game' do
 
 erb :game
 end
+
+get '/game/demo/correct' do
+
+erb :game_demo_correct
+end
+
+get '/game/demo/wrong' do
+erb :game_demo_wrong
+end
